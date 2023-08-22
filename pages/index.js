@@ -34,8 +34,9 @@ const Index = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <header className="text-center mb-8">
+    <div className="container mx-auto px-4 py-8" style={{backgroundColor:"#C9F4F3"}}>
+
+      <header className="text-center mb-8 p-2" style={{display: 'block',border:'2px solid red',padding:'0 1rem'}}>
         <h1 className="text-3xl font-bold mb-2">
           Youtube Thumbnail Downloader
         </h1>
@@ -43,9 +44,11 @@ const Index = () => {
           Download high-quality thumbnails from YouTube videos. <span className="text-red-900"> By Adam Elbaroudi</span>
         </p>
       </header>
-      <div className="text-center">
+
+      <div style={{justifyContent: 'center',width:'45%'}} className="text-center sm:min-w-3/4" >
         <input
           type="text"
+          style={{display: 'block',border:'3px solid gray'}}
           className="w-full md:w-1/2 px-4 py-2 border rounded"
           placeholder="Enter YouTube URL"
           value={videoURL}
@@ -53,11 +56,13 @@ const Index = () => {
         />
         <button
           className="btn-blue mt-2"
+          style={{marginRight: 'auto', marginLeft: 'auto',display: 'block',border:'3px solid gray'}}
           onClick={() => getYouTubeThumbnail(videoURL)}
         >
           Download Thumbnails
         </button>
       </div>
+
       {thumbnailOptions.length > 0 && (
         <div className="mt-8">
           <h2 className="text-xl font-semibold mb-4">Thumbnail Options</h2>
@@ -76,6 +81,7 @@ const Index = () => {
           </div>
         </div>
       )}
+
     </div>
   );
 };
