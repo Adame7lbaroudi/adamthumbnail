@@ -36,7 +36,7 @@ const Index = () => {
   return (
     <div className="container mx-auto px-4 py-8" style={{backgroundColor:"#C9F4F3"}}>
 
-      <header className="text-center mb-8 p-2" style={{display: 'block',border:'2px solid red',padding:'0 1rem'}}>
+      <header className="text-center mb-8 p-2" style={{display: 'block',padding:'0 1rem'}}>
         <h1 className="text-3xl font-bold mb-2">
           Youtube Thumbnail Downloader
         </h1>
