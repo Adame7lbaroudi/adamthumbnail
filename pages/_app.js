@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
         openGraph={{
           url: "https://your-website-url.com",
           title: "Youtube Thumbnail Downloader",
-          description: "Download high-quality thumbnails from YouTube videos.",
+          description: "Download high-quality thumbnails from YouTube videos.By Adam Elbaroudi",
           site_name: "Youtube Thumbnail Downloader",
         }}
       />
