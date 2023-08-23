@@ -46,11 +46,11 @@ const Index = () => {
         
       </header>
 
-      <div style={{justifyContent: 'center',width:'45%'}} className="text-center sm:min-w-3/4" >
+      <div style={{justifyContent: 'center',width:'65%',marginTop:"2rem" ,margin:"0 auto"}} className="text-center" >
         <input
           type="text"
-          style={{display: 'block',border:'3px solid gray'}}
-          className="w-full md:w-1/2 px-4 py-2 border rounded"
+          style={{display: 'block',border:'3px solid gray',marginTop:"2rem" }}
+          className="px-4 py-2 border rounded"
           placeholder="Enter YouTube URL"
           value={videoURL}
           onChange={(e) => setVideoURL(e.target.value)}
