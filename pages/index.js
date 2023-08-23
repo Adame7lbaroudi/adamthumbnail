@@ -34,6 +34,7 @@ const Index = () => {
   };
 
   return (
+
     <div className="container mx-auto px-4 py-8" style={{backgroundColor:"#C9F4F3"}}>
 
       <header className="text-center mb-8 p-2" style={{display: 'block',padding:'0 1rem'}}>
@@ -41,8 +42,8 @@ const Index = () => {
           Youtube Thumbnail Downloader
         </h1>
         <p className="text-gray-600">
-          Download high-quality thumbnails from YouTube videos. <span className="text-red-900"> By Adam Elbaroudi</span>
-        </p>
+          Download high-quality thumbnails from YouTube videos.</p> 
+        
       </header>
 
       <div style={{justifyContent: 'center',width:'45%'}} className="text-center sm:min-w-3/4" >
@@ -65,23 +66,30 @@ const Index = () => {
 
       {thumbnailOptions.length > 0 && (
         <div className="mt-8">
-          <h2 className="text-xl font-semibold mb-4">Thumbnail Options</h2>
+          <h2 className="text-xl font-semibold mb-4" style={{marginLeft: '1.5rem'}}>Thumbnail Options</h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {thumbnailOptions.map((option, index) => (
               <div key={index} className="thumbnail-option">
                 <img src={option.url} alt={`Thumbnail ${index + 1}`} />
                 <button
                   className="btn-blue mt-2"
+                  style={{marginRight: 'auto', marginLeft: 'auto',display: 'block',border:'3px solid gray'}}
                   onClick={() => copy(option.url)}
                 >
                   Copy Image URL
                 </button>
+                <a
+                  className="btn-blue mt-2"
+                  style={{width:'200px',margin: '1rem auto',display: 'block',border:'3px solid gray'}}
+                  href={option.url} download={`thumbnail_${index + 1}.jpg`}
+                >
+                  Download Image
+                </a>
               </div>
             ))}
           </div>
         </div>
       )}
-
     </div>
   );
 };

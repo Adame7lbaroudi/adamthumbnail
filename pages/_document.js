@@ -26,7 +26,7 @@ class MyDocument extends Document {
           <script data-ad-client="YOUR_ADSENSE_CLIENT_ID" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         </Head>
         <body>
-          
+        <h4 className="text-cyan-400" style={{position:"absolute", top:"15px",right:"35px",color:"#25CDF0",fontWeight:"700"}} > By Adam Elbaroudi</h4>
           <Main />
           <NextScript />
         </body>
